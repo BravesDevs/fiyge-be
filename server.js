@@ -21,7 +21,6 @@ class FormBuilderService {
 
     async connect() {
 
-        // Check if the connection is already open
         if (mongoose.connection.readyState === 1) {
             return;
         }
