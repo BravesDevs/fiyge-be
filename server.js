@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const formRoutes = require('./routes/routes');
 
+const { configs } = require('./configs/applicationConfigs');
+
 const cors = require('cors');
 
 const app = express();
@@ -24,8 +26,7 @@ class FormBuilderService {
         if (mongoose.connection.readyState === 1) {
             return;
         }
-
-        mongoose.connect('mongodb+srv://root:root@fiyge-be.bnpll.mongodb.net/formBuilder', {
+        mongoose.connect(configs.db.url, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         }).then(() => {
@@ -52,8 +53,8 @@ class FormBuilderService {
     }
 
     async startServer() {
-        app.listen(3000, () => {
-            console.log('Server started on port 3000');
+        app.listen(configs.app.port, () => {
+            console.log(`${configs.app.name} running on port ${configs.app.port}`);
         });
     }
 }
