@@ -24,8 +24,8 @@ This is the backend service for a form builder application. It uses **Node.js**,
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/form-builder-backend.git
-   cd form-builder-backend
+   git clone https://github.com/BravesDevs/fiyge-be.git
+   cd fiyge-be
    ```
 
 2. **Install dependencies**:
