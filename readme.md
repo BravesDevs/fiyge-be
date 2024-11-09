@@ -36,11 +36,12 @@ This is the backend service for a form builder application. It uses **Node.js**,
 
 3. **Set up environment variables**:
 
-   Create a `.env` file in the root directory and add the following environment variables:
+   Create a `.env` file in the root directory and add the following environment variables, here is a sample:
 
    ```env
    PORT=3000
-   MONGODB_URI=mongodb://localhost:27017/form-builder
+   MONGODB_ATLAS_URL=mongodb://localhost:27017/form-builder -- Replace with your MongoDB connection string
+   APP_NAME=Form Builder
    ```
 
    Replace the `MONGODB_URI` value with your MongoDB connection string.
@@ -53,11 +54,3 @@ This is the backend service for a form builder application. It uses **Node.js**,
    ```
 
    The server should now be running at `http://localhost:3000`.
-
-## Sample ENV
-
-```env
-PORT=3000
-MONGODB_ATLAS_URL=mongodb://localhost:27017/form-builder -- Replace with your MongoDB connection string
-APP_NAME=Form Builder
-```
